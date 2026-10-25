@@ -30,11 +30,11 @@ RUN --mount=type=cache,target=/go/pkg \
     task build GOOS=${TARGETOS} GOARCH=${TARGETARCH} APP_BUILD_TYPE=${APP_BUILD_TYPE}
 
 # renovate: datasource=github-releases depName=opentofu/opentofu
-ENV OPENTOFU_VERSION=1.11.0
+ENV OPENTOFU_VERSION=1.13.2
 # renovate: datasource=github-releases depName=hashicorp/terraform
-ENV TERRAFORM_VERSION=1.11.3
+ENV TERRAFORM_VERSION=1.17.3
 # renovate: datasource=github-releases depName=gruntwork-io/terragrunt
-ENV TERRAGRUNT_VERSION=0.78.0
+ENV TERRAGRUNT_VERSION=1.2.1
 #ENV PULUMI_VERSION="3.116.1"
 #ENV POWERSHELL_VERSION="3.116.1"
 
@@ -53,7 +53,7 @@ FROM alpine:3.24
 
 ARG TARGETARCH="amd64"
 # renovate: datasource=pypi depName=ansible
-ARG ANSIBLE_VERSION=13.5.0
+ARG ANSIBLE_VERSION=14.5.0
 ENV ANSIBLE_VERSION=${ANSIBLE_VERSION}
 ARG ANSIBLE_VENV_PATH=/opt/semaphore/apps/ansible/${ANSIBLE_VERSION}/venv
 
